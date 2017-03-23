@@ -60,3 +60,12 @@ gem 'simple_form'
 
 # Include Devise
 gem 'devise'
+
+# Include CarrierWave
+gem 'carrierwave', '~> 1.0'
+
+# Include Figaro
+gem "figaro"
+
+# Include Fog
+gem "fog"
