@@ -69,3 +69,6 @@ gem "figaro"
 
 # Include Fog
 gem "fog"
+
+# Include MiniMagick
+gem "mini_magick"
