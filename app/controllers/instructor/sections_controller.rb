@@ -25,12 +25,15 @@ class Instructor::SectionsController < ApplicationController
 
   helper_method :current_course
   def current_course
-    if params[:course_id]
-      @current_course ||= Course.find(params[:course_id])
-    else
-      current_section.course
-    end
-  end  
+    @current_course ||= Course.find(params[:course_id])
+  end
+  # def current_course
+    # if params[:course_id]
+    #   @current_course ||= Course.find(params[:course_id])
+    # else
+    #   current_section.course
+    # end
+  # end  
 
   def require_authorized_for_current_course
     if current_course.user != current_user
