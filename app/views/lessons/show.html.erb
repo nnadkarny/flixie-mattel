@@ -11,7 +11,7 @@
       Next Lesson &nbsp;
       <span class="fa fa-forward"></span>
     <% end %>
-  <% end %>
+  <% end %>  
 
   <br class="clr" />
   <br />
@@ -25,4 +25,13 @@
     </p>
     </noscript>
   </video>
+
+  <br />
+
+  <%= link_to course_path(current_lesson.section.course), class: 'btn btn-default' do %>
+    <span class="fa fa-step-backward"></span>
+    &nbsp; Course Page
+  <% end %>
+
+  <br class="clr" />  
 </div>

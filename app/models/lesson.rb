@@ -12,5 +12,4 @@ class Lesson < ApplicationRecord
     end
     return lesson
   end
-
 end

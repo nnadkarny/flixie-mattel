@@ -4,9 +4,14 @@
     <title>Flixter</title>
     <%= csrf_meta_tags %>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <!--     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
     <link href="http://vjs.zencdn.net/5.18.4/video-js.css" rel="stylesheet">
   </head>
 
@@ -20,16 +25,16 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-            <li class="nav-item">
+            <li class="nav-item all-courses">
             <%= link_to 'See All Courses', courses_path %>
             </li>
           </ul>
           <ul class="navbar-nav">
             <%if user_signed_in? %>
-              <li class="nav-item">
-                <%= link_to 'My Dashboard', dashboard_path %>
+              <li class="nav-item my-dashboard">
+                <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
               </li>
-              <li class="nav-item">
+              <li class="nav-item sign-out">
                 <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
               </li>
             <% else %>
@@ -67,9 +72,9 @@
           <div class="col-12 col-sm-3">
             <b>About</b>
             <br />
-            <%= link_to 'Team', '#' %>
+            <%= link_to 'Team', team_path %>
             <br />
-            <%= link_to 'Careers', '#' %>
+            <%= link_to 'Careers', careers_path %>
             <br />
             <%= link_to 'Privacy Policy', privacy_path %>
           </div>
