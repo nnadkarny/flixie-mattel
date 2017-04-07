@@ -33,6 +33,10 @@
                       data-description="<%= @course.title %> (<%= number_to_currency @course.cost %>)"
                       data-amount="<%= (@course.cost * 100).to_i %>"
                       data-locale="auto"></script>
+              <p class="payment-disclaimer">
+                Use this credit card number:
+                4242424242424242e
+              </p>              
             <% end %>     
           <% end %>   
         <% end %>
